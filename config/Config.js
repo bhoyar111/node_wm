@@ -1,7 +1,7 @@
 const environment = {
     local: {
         PORT: 4000,
-        DATABASE: "mongodb://localhost:27017/Tutorial"
+        DATABASE: "mongodb://127.0.0.1:27017/Tutorial"
     },
     staging: {
         PORT: 9273,

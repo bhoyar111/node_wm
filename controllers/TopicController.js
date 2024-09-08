@@ -109,9 +109,9 @@ export const getCountByTechnology = async (req, res) => {
             return res.status(404).json({ error: "Technology not found" });
         }
 
-        const topics = await Topic.find({ technology_id: id });
+        const topics = await Topic.find({ technology_id: id, isDeleted: false });
 
-        const totalCount = await Topic.countDocuments({ technology_id: id });
+        const totalCount = await Topic.countDocuments({ technology_id: id, isDeleted: false });
         
         const response = {
             topics,
